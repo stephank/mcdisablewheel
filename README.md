@@ -3,6 +3,8 @@
 A patch for the Minecraft client, built on [MCPatcher], that disables the
 mouse wheel for inventory scrolling. Handy when using a Magic Mouse, or such.
 
+MIT licensed.
+
  [MCPatcher]: http://www.minecraftforum.net/topic/232701-12w27a-125update-710-mcpatcher-hd-fix-240/
 
 ### Installing
