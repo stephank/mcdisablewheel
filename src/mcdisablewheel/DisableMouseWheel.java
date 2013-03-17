@@ -4,11 +4,11 @@ import static javassist.bytecode.Opcode.INVOKESTATIC;
 import static javassist.bytecode.Opcode.ICONST_0;
 import java.io.IOException;
 
-import com.pclewis.mcpatcher.BytecodePatch;
-import com.pclewis.mcpatcher.BytecodeSignature;
-import com.pclewis.mcpatcher.ClassMod;
-import com.pclewis.mcpatcher.MethodRef;
-import com.pclewis.mcpatcher.Mod;
+import com.prupe.mcpatcher.BytecodePatch;
+import com.prupe.mcpatcher.BytecodeSignature;
+import com.prupe.mcpatcher.ClassMod;
+import com.prupe.mcpatcher.MethodRef;
+import com.prupe.mcpatcher.Mod;
 
 public final class DisableMouseWheel extends Mod {
     public DisableMouseWheel() {
@@ -17,14 +17,14 @@ public final class DisableMouseWheel extends Mod {
         description = "Disables the mouse wheel for inventory scrolling";
         version = "0.1";
 
-        classMods.add(new MinecraftMod());
+        addClassMod(new MinecraftMod());
     }
 
     private final class MinecraftMod extends ClassMod {
         public MinecraftMod() {
             // Find the main tick handling method.
             MethodRef runTick = new MethodRef(getDeobfClass(), "runTick", "()V");
-            classSignatures.add(new BytecodeSignature() {
+            addClassSignature(new BytecodeSignature() {
                 @Override
                 public String getMatchExpression() {
                     return buildExpression(
@@ -34,7 +34,7 @@ public final class DisableMouseWheel extends Mod {
             }.setMethod(runTick));
 
             // Patch the mouse event handling.
-            patches.add(new BytecodePatch() {
+            addPatch(new BytecodePatch() {
                 @Override
                 public String getDescription() {
                     return "disable mouse wheel";
@@ -49,7 +49,7 @@ public final class DisableMouseWheel extends Mod {
                 }
 
                 @Override
-                public byte[] getReplacementBytes() throws IOException {
+                public byte[] getReplacementBytes() {
                     // Simply replace it by 0.
                     return buildCode(
                         ICONST_0
