@@ -2,7 +2,6 @@ package mcdisablewheel;
 
 import static javassist.bytecode.Opcode.INVOKESTATIC;
 import static javassist.bytecode.Opcode.ICONST_0;
-import java.io.IOException;
 
 import com.prupe.mcpatcher.BytecodePatch;
 import com.prupe.mcpatcher.BytecodeSignature;
