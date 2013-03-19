@@ -24,4 +24,4 @@ MIT licensed.
 
 - Run MCPatcher as usual, and select the `Disable Mouse Wheel` patch.
 
- [Download MCDisableWheel]: https://github.com/downloads/stephank/mcdisablewheel/MCDisableWheel-0.2.jar
+ [Download MCDisableWheel]: http://stephan.kochen.nl/public/mcdisablewheel/MCDisableWheel-0.2.jar
