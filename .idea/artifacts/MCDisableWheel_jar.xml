@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="MCDisableWheel:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/</output-path>
+    <root id="archive" name="MCDisableWheel.jar">
+      <element id="module-output" name="mcdisablewheel" />
+    </root>
+  </artifact>
+</component>

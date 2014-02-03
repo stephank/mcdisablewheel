@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mcpatcher">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../mcpatcher/out/artifacts/mcpatcher/mcpatcher.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
