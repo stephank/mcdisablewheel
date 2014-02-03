@@ -14,7 +14,7 @@ public final class DisableMouseWheel extends Mod {
         name = "Disable Mouse Wheel";
         author = "stephan@kochen.nl";
         description = "Disables the mouse wheel for inventory scrolling";
-        version = "0.2";
+        version = "0.3";
 
         addClassMod(new MinecraftMod());
     }
